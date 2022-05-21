@@ -8,26 +8,26 @@ public class BasicQueueOperations {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] input = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
-        int countToPush = input[0];
-        int countToPop = input[1];
+        int countToAdd = input[0];
+        int countToPoll = input[1];
         int elementToSearch = input[2];
 
         int[] numbers = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
-        ArrayDeque<Integer> stack = new ArrayDeque<>();
-        for (int i = 0; i < countToPush; i++) {
-            stack.push(numbers[i]);
+        ArrayDeque<Integer> queue = new ArrayDeque<>();
+        for (int i = 0; i < countToAdd; i++) {
+            queue.add(numbers[i]);
         }
-        for (int i = 0; i < countToPop; i++) {
-            stack.pop();
+        for (int i = 0; i < countToPoll; i++) {
+            queue.poll();
         }
-        if(stack.contains(elementToSearch)) {
+        if(queue.contains(elementToSearch)) {
             System.out.println("true");
         }else {
-            if(stack.isEmpty()) {
+            if(queue.isEmpty()) {
                 System.out.println("0");
             }else {
                 int minNumber = Integer.MAX_VALUE;
-                for (Integer num : stack) {
+                for (Integer num : queue) {
                     if(num < minNumber) {
                         minNumber = num;
                     }
