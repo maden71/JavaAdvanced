@@ -15,9 +15,9 @@ public class MaximumElement {
                     int numberToPush = Integer.parseInt(input[1]);
                     stack.push(numberToPush);
                 }
-                case "2" -> {
-                    stack.pop();
-                }
+
+                case "2" -> stack.pop();
+
                 case "3" -> {
                     int maxN = Integer.MIN_VALUE;
                     for (Integer num : stack) {
