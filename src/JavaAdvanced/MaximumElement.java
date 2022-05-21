@@ -11,14 +11,16 @@ public class MaximumElement {
         for (int i = 0; i < n; i++) {
             String[] input = scanner.nextLine().split("\\s+");
             switch (input[0]) {
-                case "1" -> {
+                case "1": {
                     int numberToPush = Integer.parseInt(input[1]);
                     stack.push(numberToPush);
+                    break;
                 }
-
-                case "2" -> stack.pop();
-
-                case "3" -> {
+                case "2": {
+                    stack.pop();
+                    break;
+                }
+                case "3":
                     int maxN = Integer.MIN_VALUE;
                     for (Integer num : stack) {
                         if (num > maxN) {
@@ -26,7 +28,7 @@ public class MaximumElement {
                         }
                     }
                     System.out.println(maxN);
-                }
+                    break;
             }
         }
 
