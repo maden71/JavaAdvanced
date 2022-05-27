@@ -19,7 +19,7 @@ public class SumMatrixElements {
     }
     public static int[][] readMatrix(Scanner scanner) {
         int[] input = Arrays
-                .stream(scanner.nextLine().split(",\\s+"))
+                .stream(scanner.nextLine().split(", "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
         int rows = input[0];
@@ -27,7 +27,7 @@ public class SumMatrixElements {
         int[][] matrix = new int[rows][cols];
         for (int row = 0; row < rows; row++) {
             int[] data = Arrays
-                    .stream(scanner.nextLine().split(",\\s+"))
+                    .stream(scanner.nextLine().split(", "))
                     .mapToInt(Integer::parseInt)
                     .toArray();
             matrix[row] = data;
