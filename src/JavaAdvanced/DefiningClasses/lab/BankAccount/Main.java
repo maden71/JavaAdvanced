@@ -12,7 +12,7 @@ public class Main {
         while (!input[0].equals("End")) {
             switch (input[0]) {
                 case "Create" :
-                    
+
                     break;
                 case "Deposit" :
                     break;
