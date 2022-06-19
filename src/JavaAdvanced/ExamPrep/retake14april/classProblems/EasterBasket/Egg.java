@@ -5,5 +5,5 @@ public class Egg {
     private int strength;
     private String shape;
 
-    
+
 }
