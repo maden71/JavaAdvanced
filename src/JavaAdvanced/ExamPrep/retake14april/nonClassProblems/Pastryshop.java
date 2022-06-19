@@ -22,6 +22,6 @@ public class Pastryshop {
 
         Arrays.stream(firstLine).forEach(liquids::offer);
         Arrays.stream(secondLine).forEach(ingredients::push);
-        
+
     }
 }
