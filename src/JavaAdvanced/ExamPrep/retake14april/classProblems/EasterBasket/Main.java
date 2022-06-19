@@ -13,7 +13,7 @@ public class Main {
         basket.addEgg(egg);
 
 //Remove Egg
-        System.out.println(basket.removeEgg("Pink"));  //False
+      //  System.out.println(basket.removeEgg("Pink"));  //False
 
         Egg secondEgg = new Egg("Green", 9, "pointy");
 
@@ -21,16 +21,16 @@ public class Main {
         basket.addEgg(secondEgg);
 
 //Get strongest egg
-        Egg strongestEgg = basket.getStrongestEgg();
+       // Egg strongestEgg = basket.getStrongestEgg();
 
-        System.out.println(strongestEgg);
+       // System.out.println(strongestEgg);
 
 //Get egg
-        Egg getEgg = basket.getEgg("Green"); //Green egg with 9 strength, pointy shape
-        System.out.println(getEgg);
+      //  Egg getEgg = basket.getEgg("Green"); //Green egg with 9 strength, pointy shape
+      //  System.out.println(getEgg);
 
 
-        System.out.println(basket.report());
+       // System.out.println(basket.report());
 //Wood basket contains:
 //Red egg, with 10 strength and oval shape.
 //Green egg, with 9 strength and pointy shape.
