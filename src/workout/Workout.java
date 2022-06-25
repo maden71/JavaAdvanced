@@ -13,11 +13,13 @@ public class Workout {
     }
 
     public void addExercise(Exercise exercise){
-        this.exercises.add(exercise);
+        if(this.exercises.size() < exerciseCount) {
+            this.exercises.add(exercise);
+        }
     }
     public boolean removeExercise(String name, String muscle){
         for (Exercise exercise : exercises) {
-            if(exercise.getName().equals(name)) {
+            if(exercise.getName().equals(name) && exercise.getMuscle().equals(muscle)) {
                 exercises.remove(exercise);
                 return true;
             }
