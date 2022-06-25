@@ -1,4 +1,4 @@
-package JavaAdvanced.Exam.ex3;
+package JavaAdvanced.Exam.workout;
 
 public class Exercise {
     private String name;
