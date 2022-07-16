@@ -27,10 +27,10 @@ public class Student {
         return studentGrade;
     }
     public String getCommentary(Student student) {
-        if(student.getStudentGrade() >= 3.50) {
-            return "Average student";
-        }else if (student.getStudentGrade() >= 5.50) {
+        if(student.getStudentGrade() >= 5.00) {
             return "Excellent student";
+        }else if (student.getStudentGrade() >= 3.50) {
+            return "Avarage student";
         }else {
             return "Very nice person";
         }

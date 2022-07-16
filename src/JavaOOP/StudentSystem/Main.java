@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Student student = null;
+        StudentSystem student = new StudentSystem();
         String[] input = scanner.nextLine().split("\\s+");
         while(!input[0].equals("Exit")) {
             switch (input[0]) {
@@ -17,7 +17,8 @@ public class Main {
                     break;
                     
                 case "Show" :
-                    student.show(input[1]);
+                    String nameShow = input[1];
+                    System.out.println(student.show(nameShow));
                     break;
                 
             }
