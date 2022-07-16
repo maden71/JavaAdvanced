@@ -1,14 +1,39 @@
 package JavaOOP.StudentSystem;
 
-public class Student {
-    private static String studentName;
-    private static int studentAge;
-    private static double studentGrade;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void create(String name, int age, double grade) {
+public class Student {
+    private String studentName;
+    private int studentAge;
+    private double studentGrade;
+
+    public Student(String name, int age, double grade) {
         this.studentName = name;
         this.studentAge = age;
-        this.
+        this.studentGrade = grade;
+    }
+
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public int getStudentAge() {
+        return studentAge;
+    }
+
+    public double getStudentGrade() {
+        return studentGrade;
+    }
+    public String getCommentary(Student student) {
+        if(student.getStudentGrade() >= 3.50) {
+            return "Average student";
+        }else if (student.getStudentGrade() >= 5.50) {
+            return "Excellent student";
+        }else {
+            return "Very nice person";
+        }
     }
 
 }
