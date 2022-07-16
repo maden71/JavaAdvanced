@@ -14,7 +14,7 @@ public class Rectangle {
         this.topRightY = topRightY;
 }
 
-    public boolean contains1(Point point) {
+    public boolean contains(Point point) {
         return (point.getX() >= getBottomLeftX() && point.getX() <= getTopRightX())
                 && (point.getY() >= getBottomLeftY() && point.getY() >= getTopRightY());
     }

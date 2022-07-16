@@ -18,7 +18,7 @@ public class Main {
                     .mapToInt(Integer::parseInt)
                     .toArray();
             Point point = new Point(pointC[0],pointC[1]);
-            System.out.println(rectangle.contains1(point));
+            System.out.println(rectangle.contains(point));
         }
     }
 }
