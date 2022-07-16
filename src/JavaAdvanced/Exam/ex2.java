@@ -1,6 +1,4 @@
 package JavaAdvanced.Exam;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ex2 {
@@ -137,9 +135,9 @@ public class ex2 {
     }
 
     static void printMatrix(String[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
+        for (String[] strings : matrix) {
             for (int j = 0; j < matrix.length; j++) {
-                System.out.print(matrix[i][j] + " ");
+                System.out.print(strings[j] + " ");
             }
             System.out.println();
         }
