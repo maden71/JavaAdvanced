@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CarInfo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JavaAdvanced/DefiningClasses/lab/CarInfo/CarInfo.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
