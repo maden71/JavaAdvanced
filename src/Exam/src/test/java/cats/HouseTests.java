@@ -5,14 +5,21 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class HouseTests {
+    private static final Cat cat33 = new Cat("Pooh");
 
     private House house;
 
     @Before
     public void setup(){
-        house = new House("pesho",1);
+        house = new House("pesho",4);
     }
 
+    @Test
+    public void testIsNotHungry(){
+        house.addCat(cat33);
+        house.catForSale(cat33.getName());
+        Assert.assertFalse(cat33.isHungry());
+    }
     @Test
     public void getNameTest(){
 
@@ -27,7 +34,8 @@ public class HouseTests {
 
     @Test
     public void getCapacityTest() {
-        Assert.assertEquals(1, house.getCapacity());
+        House housec = new House("hope",6);
+        Assert.assertEquals(6, housec.getCapacity());
     }
 
     @Test
@@ -38,8 +46,11 @@ public class HouseTests {
 
     @Test(expected = IllegalArgumentException.class)
     public void testAddCatExeption(){
-        house.addCat(new Cat("penka"));
-        house.addCat(new Cat("chorap"));
+        House house1 = new House("sdsdsd", 2);
+        house1.addCat(new Cat("kjlasdjklasd"));
+        house1.addCat(new Cat("Sdsd"));
+        house1.addCat(new Cat("kjsd"));
+        house1.addCat(new Cat("ksbc"));
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -80,6 +91,14 @@ public class HouseTests {
         house2.addCat(new Cat("ginka"));
         String result = house2.statistics();
         Assert.assertEquals("The cat ginka is in the house ginka!",result);
+    }
+
+    @Test
+    public void testStatisticsMoreThanOneCat(){
+        house.addCat(cat33);
+        house.addCat(new Cat("Pep"));
+        String result =  house.statistics();
+        Assert.assertEquals(String.format("The cat Pooh, Pep is in the house %s!", house.getName()), result);
     }
 
 
