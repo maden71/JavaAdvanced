@@ -1,8 +1,9 @@
 package restaurant.entities.drinks.interfaces;
 
 public class Smoothie extends BaseBeverage {
+    private static final double smoothiePrice = 4.50;
 
-    public Smoothie(String name, int counter, double price, String brand) {
-        super(name, counter, price - 4.50, brand);
+    public Smoothie(String name, int counter, String brand) {
+        super(name, counter, smoothiePrice, brand);
     }
 }

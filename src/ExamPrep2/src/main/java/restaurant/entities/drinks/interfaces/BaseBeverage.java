@@ -8,35 +8,35 @@ public abstract class BaseBeverage implements Beverages{
     private double price;
     private String brand;
 
-    protected BaseBeverage(String name, int counter, double price, String brand) {
+    public BaseBeverage(String name, int counter, double price, String brand) {
         setName(name);
         setCounter(counter);
         setPrice(price);
         setBrand(brand);
     }
 
-    protected void setName(String name) {
+    public void setName(String name) {
         if(name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException(INVALID_NAME);
         }
         this.name = name;
     }
 
-    protected void setCounter(int counter) {
+    public void setCounter(int counter) {
         if(counter <= 0) {
             throw new IllegalArgumentException(INVALID_COUNTER);
         }
         this.counter = counter;
     }
 
-    protected void setPrice(double price) {
+    public void setPrice(double price) {
         if(price <= 0) {
             throw new IllegalArgumentException(INVALID_PRICE);
         }
         this.price = price;
     }
 
-    protected void setBrand(String brand) {
+    public void setBrand(String brand) {
         if(brand == null || brand.trim().isEmpty()) {
             throw new IllegalArgumentException(INVALID_BRAND);
         }

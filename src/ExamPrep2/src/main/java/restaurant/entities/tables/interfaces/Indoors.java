@@ -2,8 +2,10 @@ package restaurant.entities.tables.interfaces;
 
 public class Indoors extends BaseTable{
 
-    public Indoors(int number, int size, double pricePerPerson) {
-        super(number,size,pricePerPerson - 3.50);
+    private static final double pricePerPerson = 3.50;
+
+    public Indoors(int number, int size) {
+        super(number,size,pricePerPerson);
     }
 
 }

@@ -20,13 +20,14 @@ public abstract class BaseTable implements Table {
     private Boolean isReservedTable;
     private double allPeople;
 
-    protected BaseTable(int number, int size, double pricePerPerson) {
+
+    public BaseTable(int number, int size, double pricePerPerson) {
         this.number = number;
         setSize(size);
         this.pricePerPerson = pricePerPerson;
     }
 
-    protected void setSize(int size) {
+    public void setSize(int size) {
         if(size <= 0) {
             throw new IllegalArgumentException(INVALID_TABLE_SIZE);
         }
@@ -109,9 +110,17 @@ public abstract class BaseTable implements Table {
         allPeople = 0.0;
 
     }
-
+     //"Table - {table number}
+     //Size - {table size}
+     //Type - {table type}
+     //All price - {price per person for the current table}"
     @Override
     public String tableInformation() {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        sb.append("Table - ").append(number).append(System.lineSeparator());
+        sb.append("Size - ").append(size).append(System.lineSeparator());
+        sb.append("Type - ").append(this.getClass().getSimpleName()).append(System.lineSeparator());
+        sb.append("All price - ").append(pricePerPerson).append(System.lineSeparator());
+        return sb.toString().trim();
     }
 }
